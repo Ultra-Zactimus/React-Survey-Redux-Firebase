@@ -1,10 +1,8 @@
 import React from "react";
-// import PropTypes from "prop-types";
-// import ReusableForm from "./ReusableForm";
 import { useFirestore } from 'react-redux-firebase';
 import { Form, Button } from 'react-bootstrap';
 
-const NewSurvey = (props) => {
+const NewSurvey = () => {
 
   const firestore = useFirestore();
 
@@ -12,6 +10,7 @@ const NewSurvey = (props) => {
     event.preventDefault();
     console.log("event: ", event);
     console.log("event targ1: ", event.target.q1.value);
+    
     return firestore.collection('surveys').add(
       {
         title: event.target.title.value,
@@ -23,7 +22,7 @@ const NewSurvey = (props) => {
         timeOpen: firestore.FieldValue.serverTimestamp()
       }
     );
-
+    
   }
 
   return (
@@ -67,15 +66,11 @@ const NewSurvey = (props) => {
             className="mt-3"
           />
           <Button variant="primary" type='submit' className="mt-3">Submit</Button>
-          <Button variant="outline-secondary" type='submit' className="mt-3 ms-3">Cancel</Button>
+          <Button variant="outline-secondary" className="mt-3 ms-3">Cancel</Button>
         </Form>
       </div>
     </React.Fragment>
   );
 }
-
-// NewSurvey.propTypes = {
-//   onNewFormCreation: PropTypes.func
-// };
 
 export default NewSurvey;

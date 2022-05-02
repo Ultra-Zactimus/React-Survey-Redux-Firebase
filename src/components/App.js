@@ -10,7 +10,7 @@ const App = () => {
     <React.Fragment>
       <Header />
       <br/>
-      {/* <SurveyList /> */}
+      <SurveyList />
       <br/>
       <NewSurvey />
     </React.Fragment>

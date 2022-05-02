@@ -3,8 +3,6 @@ import { firestoreReducer } from 'redux-firestore';
 
 const rootReducer = combineReducers(
   {
-    // formVisibleOnPage: formVisibleReducer,
-    // mainTicketList: ticketListReducer,
     firestore: firestoreReducer
   }
 );
