@@ -15,6 +15,8 @@ const App = () => {
       <SurveyList />
       <br/>
       <NewSurvey />
+      <br/>
+      {/* <EditSurvey /> */}
     </React.Fragment>
   );
 }
