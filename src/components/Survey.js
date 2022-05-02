@@ -63,7 +63,9 @@ const Survey = (props) => {
             q3={props.q3}
             q4={props.q4}
             q5={props.q5}
-            id={props.id}/></p> : <p></p>}
+            id={props.id}
+            cancelReply={() => setHidden(!hidden)}
+            /></p> : <p></p>}
         <Button 
           variant="primary" 
           onClick={() => setHidden(!hidden)}>{buttonText()}</Button>
