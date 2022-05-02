@@ -11,7 +11,7 @@ const SurveyList = (props) => {
   ]);
 
   const surveys = useSelector(state => state.firestore.ordered.surveys);
-  // console.log(surveys);
+
   if (isLoaded(surveys)) {
     return (
       <React.Fragment>
@@ -33,6 +33,7 @@ const SurveyList = (props) => {
         })}
       </React.Fragment>
     );
+    
   // If the surveys aren't loaded yet, our fragment will return a "Loading..." message.
   } else {
     return (

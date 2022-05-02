@@ -3,6 +3,7 @@ import '../App.css';
 import Header from './Header';
 import SurveyList from './SurveyList';
 import NewSurvey from './NewSurvey';
+import Home from './Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     <React.Fragment>
       <Header />
       <br/>
+      <Home />
       <SurveyList />
       <br/>
       <NewSurvey />
