@@ -32,23 +32,29 @@ const Survey = (props) => {
     <React.Fragment>
       <div className="ps-5 pb-5 pe-2 pt-2 mx-3 mb-2 border shadow-sm">
         <div className="text-end">
-          <Badge pill bg="secondary"  className="me-3" onClick={() => setHiddenEditForm(!hiddenEditForm)}>
+          <Badge pill bg="secondary" style={{cursor:'pointer'}} className="me-3" onClick={() => setHiddenEditForm(!hiddenEditForm)}>
             Edit
           </Badge>
-          <Badge pill bg="danger" onClick={() => handleDeleteSurvey(props.id)}>
+          <Badge pill bg="danger" style={{cursor:'pointer'}} onClick={() => handleDeleteSurvey(props.id)}>
             Delete
           </Badge>
-          <hr/>
         </div>
         <p>SURVEY NAME: {props.title}</p>
-        {hiddenEditForm ? <EditSurvey 
+        {hiddenEditForm ? 
+          <React.Fragment>
+            <EditSurvey 
             title={props.title}
             q1={props.q1}
             q2={props.q2}
             q3={props.q3}
             q4={props.q4}
             q5={props.q5}
-            id={props.id}/> : <p></p>}
+            id={props.id}
+            cancelEdit={() => setHiddenEditForm(!hiddenEditForm)}
+            />
+            
+            </React.Fragment>
+            : <p></p>}
             
         {hidden ? <p><SurveyDetails 
             title={props.title}
@@ -57,8 +63,10 @@ const Survey = (props) => {
             q3={props.q3}
             q4={props.q4}
             q5={props.q5}
-            id={props.id}/></p> : <p>Details Hidden</p>}
-        <Button variant="primary" onClick={() => setHidden(!hidden)}>{buttonText()}</Button>
+            id={props.id}/></p> : <p></p>}
+        <Button 
+          variant="primary" 
+          onClick={() => setHidden(!hidden)}>{buttonText()}</Button>
       </div>
       
     </React.Fragment>

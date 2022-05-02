@@ -16,7 +16,6 @@ const App = () => {
       <br/>
       <NewSurvey />
       <br/>
-      {/* <EditSurvey /> */}
     </React.Fragment>
   );
 }
