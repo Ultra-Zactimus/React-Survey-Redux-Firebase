@@ -19,7 +19,7 @@ const SurveyList = (props) => {
         {surveys.map((survey) => {
           return (
           <Survey
-            whenSurveyClicked = { props.onSurveySelection }
+            // whenSurveyClicked = { props.onSurveySelection }
             title={survey.title}
             q1={survey.q1}
             q2={survey.q2}
