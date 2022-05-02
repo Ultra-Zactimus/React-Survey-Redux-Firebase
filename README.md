@@ -1,3 +1,53 @@
+# _{React Survey - An Epicodus Class Project}_
+
+#### By Alex Adamovich, Sarah Espinet, Daniel Lindsey, Zachary Green
+
+#### _{placeholder...}_
+
+## Technologies Used
+* `HTML`
+* `CSS`
+* `Bootstrap`
+* `JavaScript`
+* `Webpack`
+* `Babel`
+* `React`
+* `Redux`
+* `Firebase`
+* https://www.draw.io for creating the Diagram
+
+## Description
+
+_{placeholder...}_
+
+## Diagram
+
+![A diagram of the relationships of the components](./src/img/diagram.png)
+
+## Setup/Installation Requirements
+
+* Visit https://github.com/Ultra-Zactimus/keg-counter-code-review
+* Clone this repository to your desktop.
+* Navigate to the top level of the directory in your terminal.
+* Run "$ `npm install`"
+* Run "$ `npm run build`" to build the project.
+* Run "$ `npm start run`" to open a liveserver in the browser.
+
+* Please refer to the `Available Scripts` section of this README for more information.
+
+_{You do not need to add the `$` to the terminal commands. GitBash comes with that as a prefix on command line.}_
+
+## Known Bugs
+
+* The buy a Pint feature does not work. I was unable to figure out how to change the delete function into a function for decrementing the number. Probably gonna have this sussed by Monday.
+
+## License
+
+MIT
+
+Copyright (c) 2022 Alex Adamovich, Sarah Espinet, Daniel Lindsey, Zachary Green  
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
