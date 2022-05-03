@@ -2,17 +2,18 @@
 
 #### By Alex Adamovich, Sarah Espinet, Daniel Lindsey, Zachary Green
 
-#### _{placeholder...}_
+#### _{This application uses React with Redux, Router, Firebase, functional components and Hooks to display a Survey to users. Users can create, edit and delete surveys, sign in, sign up and sign out.}_
 
 ## Technologies Used
 * `HTML`
 * `CSS`
 * `Bootstrap`
 * `JavaScript`
-* `Webpack`
+* `NPM Webpack`
 * `Babel`
 * `React`
 * `Redux`
+* `Router`
 * `Firebase`
 * https://www.draw.io for creating the Diagram
 

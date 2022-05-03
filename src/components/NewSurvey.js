@@ -1,5 +1,6 @@
 import React from "react";
 import { useFirestore } from 'react-redux-firebase';
+import firebase from "firebase/compat/app";
 import { Form, Button } from 'react-bootstrap';
 
 const NewSurvey = () => {
@@ -11,6 +12,9 @@ const NewSurvey = () => {
     console.log("event: ", event);
     console.log("event targ1: ", event.target.q1.value);
     
+    const user = firebase.auth().currentUser;
+    // console.log('User email: ', user.uid);
+    
     return firestore.collection('surveys').add(
       {
         title: event.target.title.value,
@@ -19,6 +23,7 @@ const NewSurvey = () => {
         q3: event.target.q3.value,
         q4: event.target.q4.value,
         q5: event.target.q5.value,
+        userEmail: user.uid,
         timeOpen: firestore.FieldValue.serverTimestamp()
       }
     );
