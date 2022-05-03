@@ -56,7 +56,7 @@ const Survey = (props) => {
             </React.Fragment>
             : <p></p>}
             
-        {hidden ? <p><SurveyDetails 
+        {hidden ? <SurveyDetails 
             title={props.title}
             q1={props.q1}
             q2={props.q2}
@@ -65,7 +65,7 @@ const Survey = (props) => {
             q5={props.q5}
             id={props.id}
             cancelReply={() => setHidden(!hidden)}
-            /></p> : <p></p>}
+            /> : <p></p>}
         <Button 
           variant="primary" 
           onClick={() => setHidden(!hidden)}>{buttonText()}</Button>
