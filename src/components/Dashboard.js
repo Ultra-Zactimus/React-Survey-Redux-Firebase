@@ -31,10 +31,14 @@ const Dashboard = (props) => {
   
   return (
     <React.Fragment>
-        {console.log(output)} 
-        {output.map(survey => (  
+        {console.log(typeof(output))} 
+        {/* {output.map(survey => (  
           console.log(survey)
-        ))};
+        ))}; */}
+        {output.forEach(function(survey) {
+          console.log(survey);
+        })}
+        
         {/* {userList.map((survey) => {
           return (
           <Survey
