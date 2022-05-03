@@ -13,7 +13,6 @@ const NewSurvey = () => {
     console.log("event targ1: ", event.target.q1.value);
     
     const user = firebase.auth().currentUser;
-    // console.log('User email: ', user.uid);
     
     return firestore.collection('surveys').add(
       {

@@ -22,7 +22,10 @@ const Home = () => {
       <React.Fragment>
         <h1>Welcome to Our Surveys</h1>
         <br/>
-        <p>We have the best surveys in the world! Please use our navigation bar to find a survey or add one for others to take.</p>
+        <p>We have the best surveys in the world!</p> 
+        <p>Please use our navigation bar to sign in, then click to find a survey or create your own.</p>
+        <p>If you are seeing this page, you haven't signed in yet.</p>
+        <p>If you don't have an account please visit our sign up page under Accounts.</p>
       </React.Fragment>
     );
   }

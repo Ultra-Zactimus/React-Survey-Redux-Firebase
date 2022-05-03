@@ -1,8 +1,6 @@
 import React from "react";
 import firebase from "firebase/compat/app";
 import { useNavigate } from 'react-router';
-// import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
-
 
 const Signin = () => {
 
@@ -10,7 +8,6 @@ const Signin = () => {
   
   const doSignIn = (event) => {
     event.preventDefault();
-    // const auth = getAuth();
     const email = event.target.signinEmail.value;
     const password = event.target.signinPassword.value;
     firebase.auth().signInWithEmailAndPassword(email, password)

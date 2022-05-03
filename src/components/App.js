@@ -15,7 +15,6 @@ const App = () => {
   const [user, setUser] = useState(null);
   useEffect(() => {
     firebase.auth().onAuthStateChanged(async(userData) => {
-      // console.log(userData);
       if (userData) {
         setUser(userData);
       } else {

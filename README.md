@@ -19,7 +19,7 @@
 
 ## Description
 
-_{placeholder...}_
+_{Create an account on the Survey Page and create new surveys for users to take. You can view the surveys you have created on the Home page, or navigate to view all available surveys and take one of your own. }_
 
 ## Diagram
 
