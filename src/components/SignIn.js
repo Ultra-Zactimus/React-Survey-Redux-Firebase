@@ -2,7 +2,6 @@ import React from "react";
 import firebase from "firebase/compat/app";
 import { useNavigate } from 'react-router';
 
-
 const Signin = () => {
 
   const navigate = useNavigate();
