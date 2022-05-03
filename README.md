@@ -27,14 +27,13 @@ _{Create an account on the Survey Page and create new surveys for users to take.
 
 ## Setup/Installation Requirements
 
-* Visit https://github.com/Ultra-Zactimus/keg-counter-code-review
+* Visit https://github.com/Ultra-Zactimus/React-Survey-Redux-Firebase
 * Clone this repository to your desktop.
 * Navigate to the top level of the directory in your terminal.
 * Run "$ `npm install`"
-* Run "$ `npm run build`" to build the project.
 * Run "$ `npm start run`" to open a liveserver in the browser.
 
-* Please refer to the `Available Scripts` section of this README for more information.
+* Please refer to the `Available Scripts` section of this README for additonal information.
 
 _{You do not need to add the `$` to the terminal commands. GitBash comes with that as a prefix on command line.}_
 

@@ -15,7 +15,7 @@ const Home = () => {
   
   if (user) {
     return (
-      <Dashboard />
+      <Dashboard uid={user.uid} />
     )
   } else {
     return (
