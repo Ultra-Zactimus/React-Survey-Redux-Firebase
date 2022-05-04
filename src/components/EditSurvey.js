@@ -1,13 +1,10 @@
 import React from "react";
 import { useFirestore } from 'react-redux-firebase';
 import { Form, Button } from 'react-bootstrap';
-// import { useState } from 'react';
 
 const EditSurvey = (props) => {
 
   const firestore = useFirestore();
-  
-  // const [hiddenEditForm, setHiddenEditForm] = useState(false);
   
   const editSurveyInFirestore = (event) => {
     event.preventDefault();

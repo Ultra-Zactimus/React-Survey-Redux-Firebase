@@ -3,11 +3,12 @@ import Survey from "./Survey";
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
 
-
 const SurveyList = (props) => {
 
   useFirestoreConnect([
-    { collection: 'surveys' }
+    { 
+      collection: 'surveys'
+    }
   ]);
 
   const surveys = useSelector(state => state.firestore.ordered.surveys);
@@ -19,7 +20,6 @@ const SurveyList = (props) => {
         {surveys.map((survey) => {
           return (
           <Survey
-            // whenSurveyClicked = { props.onSurveySelection }
             title={survey.title}
             q1={survey.q1}
             q2={survey.q2}
@@ -33,8 +33,6 @@ const SurveyList = (props) => {
         })}
       </React.Fragment>
     );
-    
-  // If the surveys aren't loaded yet, our fragment will return a "Loading..." message.
   } else {
     return (
       <React.Fragment>

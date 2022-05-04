@@ -21,13 +21,6 @@ const Survey = (props) => {
 
   const [hiddenEditForm, setHiddenEditForm] = useState(false);
   
-//
-//  pe-3 ps-2 pb-5 pt-3  px-sm-0 px-md-3 px-lg-5 py-3
-//
-//   d-none d-md-none
-//   d-none d-md-block col-md-5
-//  m-5
-//
   return (
     <React.Fragment>
       <div className="ps-5 pb-5 pe-2 pt-2 mx-3 mb-2 border shadow-sm">

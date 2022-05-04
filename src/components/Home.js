@@ -3,9 +3,8 @@ import Dashboard from './Dashboard';
 import firebase from "firebase/compat/app";
 
 const Home = () => {
+
   const user = firebase.auth().currentUser;
-  
-  // console.log(user);
   
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {

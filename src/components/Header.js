@@ -5,7 +5,7 @@ import {
   Nav, 
   NavDropdown} from 'react-bootstrap';
   
-const Header = () => {
+const Header = (props) => {
   return (
     <Navbar bg="light" expand="lg">
     <Container>
@@ -18,21 +18,12 @@ const Header = () => {
         <Nav.Link href="/survey-list">View Surveys</Nav.Link>
       </Nav>
       <Nav className="d-flex">
-        {/* <Nav.Link href="/signin" className="btn btn-outline-secondary">Sign-In</Nav.Link> */}
         <NavDropdown
           title="Account"
-          id={`offcanvasNavbarDropdown-expand`}
-        >
+          id={`offcanvasNavbarDropdown-expand`}>
           <NavDropdown.Item href="/signup">Sign Up</NavDropdown.Item>
           <NavDropdown.Item href="/signin">Sign In</NavDropdown.Item>
           <NavDropdown.Item href="/signout">Sign Out</NavDropdown.Item>
-          {/* <NavDropdown.Item href="#action4">
-            Another action
-          </NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">
-            Something else here
-          </NavDropdown.Item> */}
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
