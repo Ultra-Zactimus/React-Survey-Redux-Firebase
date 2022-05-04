@@ -28,7 +28,7 @@ const Signin = () => {
   return (
     <React.Fragment>
       <div className="flex justify-center bg-light">
-        <div className="shadow-lg p-5 d-flex justify-content-center">
+        <div className="p-5 d-flex justify-content-center">
           <form
             className="rounded p-5 m-5 bg-white border w-50 shadow-sm"
             onSubmit={doSignIn}>
