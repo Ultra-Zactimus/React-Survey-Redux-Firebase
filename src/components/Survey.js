@@ -15,17 +15,26 @@ const Survey = (props) => {
     }
   }
   
+  const [buttonDisplay, setButtonDisplay] = useState(false);
+  const buttonDisplayStatus = () => {
+    if (buttonDisplay === false) {
+      return "d-block";
+    } else {
+      return "d-none"
+    }
+  }
+  
   const handleDeleteSurvey = (id) => {
     props.firestore.delete({collection: 'surveys', doc: id});
   }
 
   const [hiddenEditForm, setHiddenEditForm] = useState(false);
-  
+
   return (
     <React.Fragment>
       <div className="ps-5 pb-5 pe-2 pt-2 mx-3 mb-2 border shadow-sm">
         <div className="text-end">
-          <Badge pill bg="secondary" style={{cursor:'pointer'}} className="me-3" onClick={() => setHiddenEditForm(!hiddenEditForm)}>
+          <Badge pill bg="secondary" style={{cursor:'pointer'}} className="me-3" onClick={() => { setHiddenEditForm(!hiddenEditForm); setButtonDisplay(!buttonDisplay); }}>
             Edit
           </Badge>
           <Badge pill bg="danger" style={{cursor:'pointer'}} onClick={() => handleDeleteSurvey(props.id)}>
@@ -43,7 +52,12 @@ const Survey = (props) => {
             q4={props.q4}
             q5={props.q5}
             id={props.id}
-            cancelEdit={() => setHiddenEditForm(!hiddenEditForm)}
+            cancelEdit={
+                        () => {
+                        setHiddenEditForm(!hiddenEditForm);
+                        setButtonDisplay(!buttonDisplay);
+                        }
+                      }
             />
             
             </React.Fragment>
@@ -57,11 +71,17 @@ const Survey = (props) => {
             q4={props.q4}
             q5={props.q5}
             id={props.id}
-            cancelReply={() => setHidden(!hidden)}
+            cancelReply={
+                          () => {
+                            setHidden(!hidden);
+                            setButtonDisplay(!buttonDisplay);
+                          }
+                        }
             /> : <p></p>}
         <Button 
-          variant="primary" 
-          onClick={() => setHidden(!hidden)}>{buttonText()}</Button>
+          variant="primary"
+          className={buttonDisplayStatus()}
+          onClick={() => { setHidden(!hidden); setButtonDisplay(!buttonDisplay);}} >{buttonText()}</Button>
       </div>
       
     </React.Fragment>
