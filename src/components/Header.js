@@ -1,10 +1,11 @@
 import React from 'react';
+import firebase from "firebase/compat/app";
+import { useNavigate } from 'react-router';
 import {
   Container, 
   Navbar, 
   Nav, 
   NavDropdown } from 'react-bootstrap';
-  import firebase from 'firebase/compat/app';
   
 const Header = (props) => {
 
@@ -15,7 +16,45 @@ const Header = (props) => {
       return user;
     }
   });
+  
+  const navigate = useNavigate();
 
+  const doSignOut = (event) => {
+    event.preventDefault();
+    firebase.auth().signOut()
+      .then(function () {
+        console.log("Successfully signed out!");
+        navigate('/');
+      }).catch(function (error) {
+        console.log(error.message);
+      });
+  }
+  let signInOutText;
+  if (user) {
+      signInOutText = (
+        <React.Fragment>
+          <NavDropdown.Item 
+            className="text-dark"
+            onClick={doSignOut}>
+              Sign Out
+          </NavDropdown.Item>
+        </React.Fragment>
+    )
+  } else {
+    signInOutText = 
+    <React.Fragment>
+      <NavDropdown.Item 
+        href="/signin" 
+        className="text-dark">
+          Sign In
+      </NavDropdown.Item>
+      <NavDropdown.Item 
+        href="/signup" 
+        className="text-dark">
+        Sign Up
+      </NavDropdown.Item>
+    </React.Fragment>;
+  }
   return (
     <Navbar 
       bg="primary"
@@ -59,25 +98,7 @@ const Header = (props) => {
           className="text-white"
           title={ user ? user.email : "Account" }
           id={`offcanvasNavbarDropdown-expand`}>
-
-          <NavDropdown.Item 
-            href="/signup" 
-            className="text-dark form-control shadow-sm rounded">
-              Sign Up
-          </NavDropdown.Item>
-
-          <NavDropdown.Item 
-            href="/signin" 
-            className="text-dark form-control shadow-sm rounded">
-              Sign In
-          </NavDropdown.Item>
-
-          <NavDropdown.Item 
-            href="/signout" 
-            className="text-dark form-control shadow-sm rounded">
-              Sign Out
-          </NavDropdown.Item>
-
+          {signInOutText}
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>

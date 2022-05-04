@@ -20,31 +20,34 @@ function SignUp() {
 
   return (
     <React.Fragment>
-      <div className="flex justify-center">
-        <div className="border-2 border-solid border-black max-w-sm rounded overflow-hidden shadow-lg mb-2 mt-4">
-          <h1 className="text-center text-xl">
-            Sign Up
-          </h1>
+      <div className="flex justify-center bg-light">
+        <div className="shadow-lg p-5 d-flex justify-content-center">
           <form
-            className="bg-white shadow-sm rounded px-8 pt-6 pb-8"
+            className="rounded p-5 m-5 bg-white border w-50 shadow-sm"
             onSubmit={doSignUp}>
+            <h1 className="text-start">
+              Sign Up
+            </h1>
+            <small>
+              Please fill out the sign up form below
+            </small>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
+              className="form-control shadow-sm rounded mt-4"
               type='text'
-              name='email'
+              name='signinEmail'
               placeholder='Email'
             />
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-center leading-tight focus:outline-none focus:shadow-outline mb-2"
+              className="form-control shadow-sm rounded mt-3"
               type='password'
-              name='password'
+              name='signinPassword'
               placeholder='Password'
             />
             <div className="flex justify-center">
               <button
-                className="bg-warning-500 hover:bg-orange-500 font-bold py-2 px-4 rounded-full"
+                className="btn btn-primary mt-3 border shadow-sm"
                 type='submit'>
-                Sign Up
+                Sign In
               </button>
             </div>
           </form>

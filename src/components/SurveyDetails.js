@@ -35,38 +35,55 @@ const SurveyDetails = (props) => {
   
   return (
     <React.Fragment>
-      <div className="p-5 bg-light rounded shadow-lg me-4 border ">
+      <div className="p-5 bg-light rounded me-4 border ">
+        <div className="d-flex justify-content-center">
+        
+        <Form onSubmit={addResponsesToFirestore} className="bg-white p-5 shadow-sm border rounded w-75" >
         <h2 className="mb-4 fw-light"><em>What are your answers to <u>{props.title}</u></em></h2>
-        <Form onSubmit={addResponsesToFirestore}>
+          <Form.Label>
+            {props.q1}
+          </Form.Label>
           <Form.Control
             type='text'
             name='q1'
-            placeholder={props.q1}
-            className="mt-3"
+            placeholder="Enter an answer"
+            className="mb-3"
           />
+          <Form.Label>
+            {props.q2}
+          </Form.Label>
           <Form.Control
             type='text'
             name='q2'
             placeholder={props.q2}
-            className="mt-3"
+            className="mb-3"
           />
+          <Form.Label>
+            {props.q3}
+          </Form.Label>
           <Form.Control
             type='text'
             name='q3'
             placeholder={props.q3}
-            className="mt-3"
+            className="mb-3"
           />
+          <Form.Label>
+            {props.q4}
+          </Form.Label>
           <Form.Control
             type='text'
             name='q4'
             placeholder={props.q4}
-            className="mt-3"
+            className="mb-3"
           />
+          <Form.Label>
+            {props.q5}
+          </Form.Label>
           <Form.Control
             type='text'
             name='q5'
             placeholder={props.q5}
-            className="mt-3"
+            className="mb-3"
           />
           <Button 
             variant="primary" 
@@ -77,6 +94,7 @@ const SurveyDetails = (props) => {
           className="mt-3 ms-3 shadow-sm" 
           onClick={() => props.cancelReply()}>Cancel</Button>
         </Form>
+        </div>
       </div>
     </React.Fragment>
   );
